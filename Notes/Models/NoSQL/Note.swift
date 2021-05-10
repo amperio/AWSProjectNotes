@@ -15,9 +15,9 @@ import Foundation
 import UIKit
 import AWSDynamoDB
 
-@objcMembers
+@objcMembers // Debido a que AWS genera este archivo con las verison de swift 3.3 y uno esta usando una version mas actualizada, se debera ante poner objcMembers antes de la clase, o tambien @objc en cada una de las propiedades de la clase
 class Note: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
-    
+    // @objc var _userId: String?
     var _userId: String?
     var _noteId: String?
     var _content: String?
